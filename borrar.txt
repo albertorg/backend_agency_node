@@ -1,2 +1,0 @@
-db user: agency_user
-db Pass: QoSPsxU9FMorCVWO
