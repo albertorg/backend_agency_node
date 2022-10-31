@@ -11,7 +11,7 @@ const app = express()
 dbConnection()
 
 // Cors
-app.use(cors)
+app.use(cors())
 
 // Reading and parsing body 
 app.use(express.json())
