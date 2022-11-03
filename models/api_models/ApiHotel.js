@@ -1,14 +1,14 @@
 const { Schema, model } = require('mongoose')
-const ApiBoard = require('./ApiBoard')
-const ApiHotelFacility = require('./ApiHotelFacility')
-const ApiHotelIssue = require('./ApiHotelIssue')
-const ApiHotelPhone = require('./ApiHotelPhone')
-const ApiHotelPointOfInterest = require('./ApiHotelPointOfInterest')
-const ApiHotelRoom = require('./ApiHotelRoom')
-const ApiHotelTerminal = require('./ApiHotelTerminal')
-const ApiImage = require('./ApiImage')
-const ApiSegment = require('./ApiSegment')
-const ApiWildCard = require('./ApiWildCard')
+// const ApiHotelFacility = require('./ApiHotelFacility')
+// const ApiHotelIssue = require('./ApiHotelIssue')
+// const ApiHotelPhone = require('./ApiHotelPhone')
+// const ApiHotelPointOfInterest = require('./ApiHotelPointOfInterest')
+// const ApiHotelRoom = require('./ApiHotelRoom')
+// const ApiBoard = require('./ApiBoard')
+// const ApiHotelTerminal = require('./ApiHotelTerminal')
+// const ApiImage = require('./ApiImage')
+// const ApiSegment = require('./ApiSegment')
+// const ApiWildCard = require('./ApiWildCard')
 
 const ApiHotelSchema = Schema({
     S2C: {
@@ -26,7 +26,10 @@ const ApiHotelSchema = Schema({
         ref: 'ApiContent'
     },
     boardCodes: [String],
-    boards: [ApiBoard],
+    boards: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiBoard'
+    },
     category: {
         type: Schema.Types.ObjectId,
         ref: 'ApiCategory'
@@ -83,13 +86,25 @@ const ApiHotelSchema = Schema({
     exclusiveDeal: {
         type: Number
     },
-    facilities: [ApiHotelFacility],
+    facilities: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiHotelFacility'
+    },
     giataCode: {
         type: String
     },
-    images: [ApiImage],
-    interestPoints: [ApiHotelPointOfInterest],
-    issues: [ApiHotelIssue],
+    images: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiImage'
+    },
+    interestPoints: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiHotelPointOfInterest'
+    },
+    issues: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiHotelIssue'
+    },
     lastUpdate: {
         type: String
     },
@@ -100,16 +115,25 @@ const ApiHotelSchema = Schema({
         type: Schema.Types.ObjectId,
         ref: 'ApiContent'
     },
-    phones: [ApiHotelPhone],
+    phones: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiHotelPhone'
+    },
     postalCode: {
         type: String
     },
     ranking: {
         type: Number
     },
-    rooms: [ApiHotelRoom],
+    rooms: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiHotelRoom'
+    },
     segmentCodes: [Number],
-    segments: [ApiSegment],
+    segments: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiSegment'
+    },
     state: {
         type: Schema.Types.ObjectId,
         ref: 'ApiState'
@@ -117,11 +141,17 @@ const ApiHotelSchema = Schema({
     stateCode: {
         type: String
     },
-    terminals: [ApiHotelTerminal],
+    terminals: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiHotelTerminal'
+    },
     web: {
         type: String
     },
-    Wildcards: [ApiWildCard],
+    Wildcards: {
+        type: [Schema.Types.ObjectId],
+        ref: 'ApiWildCard'
+    },
     zone: {
         type: Schema.Types.ObjectId,
         ref: 'ApiZone'

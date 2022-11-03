@@ -12,7 +12,10 @@ const ApiCountrySchema = Schema({
     isoCode: {
         type: String
     },
-    states: [ApiState]
+    states: {
+        type: Schema.Types.ObjectId,
+        ref: 'ApiState'
+    }
 
 })
 

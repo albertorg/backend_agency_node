@@ -1,6 +1,6 @@
 const CryptoJS = require("crypto-js");
 
-export const xSignature = () => {
+const xSignature = () => {
     
     const publicKey = process.env.API_KEY
     const privateKey = process.env.SECRET
@@ -15,3 +15,5 @@ export const xSignature = () => {
     const hash = CryptoJS.SHA256(assemble).toString()
     return hash.toString(CryptoJS.enc.Hex)    
 }
+
+module.exports = xSignature

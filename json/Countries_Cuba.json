@@ -1,0 +1,28 @@
+{
+  "from" : 1,
+  "to" : 203,
+  "total" : 1,
+  "auditData" : {
+    "processTime" : "1",
+    "timestamp" : "2022-10-26 06:05:47.482",
+    "requestHost" : "10.197.239.220",
+    "serverId" : "hotel-content-api-78c5999b48-jdbr4",
+    "environment" : "[gcpeuropewest1, NO_ZONE, k8s, java11]",
+    "release" : "",
+    "internal" : "b67cf84018575c8d"
+  },
+  "countries" : [ {
+    "code" : "CU",
+    "isoCode" : "CU",
+    "description" : {
+      "content" : "Cuba"
+    },
+    "states" : [ {
+      "code" : "CU",
+      "name" : "CUBA"
+    }, {
+      "code" : "07",
+      "name" : "CUBA"
+    } ]
+  } ]
+}

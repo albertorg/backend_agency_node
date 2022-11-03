@@ -8,9 +8,7 @@ const ApiGroupZoneSchema = Schema({
         type: Schema.Types.ObjectId,
         ref: 'ApiContent'
     },
-    zones: {
-        type: Number
-    }
+    zones: [Number]
 
 })
 

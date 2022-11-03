@@ -1,6 +1,34 @@
 const { Schema, model } = require('mongoose')
-const ApiGroupZone = require('./ApiGroupZone')
-const ApiZone = require('./ApiZone')
+
+const ApiContentSchema = Schema({
+    content: {
+        type: String,
+    },
+    languageCode: {
+        type: String,
+    }
+})
+
+const ApiGroupZoneSchema = Schema({
+    groupZoneCode: {
+        type: String
+    },
+    name: ApiContentSchema,
+    zones: [Number]
+
+})
+
+const ApiZoneSchema = Schema({
+    description: ApiContentSchema,
+    name: {
+        type: String
+    },
+    zoneCode: {
+        type: Number
+    }
+
+})
+
 
 const ApiDestinationSchema = Schema({
     code: {
@@ -9,15 +37,12 @@ const ApiDestinationSchema = Schema({
     countryCode: {
         type: String,
     },
-    groupZones: [ApiGroupZone],
+    groupZones: [ApiGroupZoneSchema],
     isoCode: {
         type: String
     },
-    name: {
-        type: Schema.Types.ObjectId,
-        ref: 'ApiContent'
-    },
-    zones: [ApiZone]
+    name: ApiContentSchema,
+    zones: [ApiZoneSchema]
 
 })
 

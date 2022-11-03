@@ -12,8 +12,8 @@ const ApiHotelRoomSchema = Schema({
     roomCode: {
         type: String
     },
-    roomFacilities: [ApiHotelRoomFacility],
-    roomStays: [ApiHotelRoomStay],
+    roomFacilities: [ApiHotelRoomFacility.schema],
+    roomStays: [ApiHotelRoomStay.schema],
     roomType: {
         type: String
     }

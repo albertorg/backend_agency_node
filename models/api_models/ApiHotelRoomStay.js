@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose')
 const ApiHotelRoomStayFacility = require('./ApiHotelRoomStayFacility')
 
+
 const ApiHotelRoomStaySchema = Schema({
     description: {
         type: String
@@ -8,7 +9,7 @@ const ApiHotelRoomStaySchema = Schema({
     order: {
         type: String,
     },
-    roomStayFacilities: [ApiHotelRoomStayFacility],
+    roomStayFacilities: [ApiHotelRoomStayFacility.schema],
     stayType: {
         type: String
     }

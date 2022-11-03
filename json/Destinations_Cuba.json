@@ -1,0 +1,621 @@
+{
+  "from" : 1,
+  "to" : 100,
+  "total" : 18,
+  "auditData" : {
+    "processTime" : "25",
+    "timestamp" : "2022-10-26 06:08:05.284",
+    "requestHost" : "10.197.239.218",
+    "serverId" : "hotel-content-api-78c5999b48-jdbr4",
+    "environment" : "[gcpeuropewest1, NO_ZONE, k8s, java11]",
+    "release" : "",
+    "internal" : "86c0d621aaff6907"
+  },
+  "destinations" : [ {
+    "code" : "BAA",
+    "name" : {
+      "content" : "Baracoa"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Baracoa",
+      "description" : {
+        "content" : "Baracoa"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Punta Maisi",
+      "description" : {
+        "content" : "Punta Maisi"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA19",
+      "name" : {
+        "content" : "Baracoa"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "CAG",
+    "name" : {
+      "content" : "Cayo Guillermo"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Cayo Guillermo",
+      "description" : {
+        "content" : "Cayo Guillermo"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA1",
+      "name" : {
+        "content" : "Cayo Guillermo"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "CCO",
+    "name" : {
+      "content" : "Cayo Coco"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Cayo Coco",
+      "description" : {
+        "content" : "Cayo Coco"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA6",
+      "name" : {
+        "content" : "Caya Coco"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "CI2",
+    "name" : {
+      "content" : "Ciego de Avila"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Ciego de Avila",
+      "description" : {
+        "content" : "Ciego de Avila"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Morón",
+      "description" : {
+        "content" : "Morón"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA22",
+      "name" : {
+        "content" : "Ciego de Avila"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "CIE",
+    "name" : {
+      "content" : "Cienfuegos"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Cienfuegos",
+      "description" : {
+        "content" : "Cienfuegos"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA7",
+      "name" : {
+        "content" : "Cienfuegos"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "CMG",
+    "name" : {
+      "content" : "Camaguey"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Playa Santa Lucia",
+      "description" : {
+        "content" : "Playa Santa Lucia"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Camaguey City",
+      "description" : {
+        "content" : "Camaguey City"
+      }
+    }, {
+      "zoneCode" : 3,
+      "name" : "Florida",
+      "description" : {
+        "content" : "Florida"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Cayo Cruz",
+      "description" : {
+        "content" : "Cayo Cruz"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA15",
+      "name" : {
+        "content" : "Camaguey"
+      },
+      "zones" : [ 1, 2 ]
+    } ]
+  }, {
+    "code" : "CZA",
+    "name" : {
+      "content" : "Cienaga de Zapata"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Playa Larga",
+      "description" : {
+        "content" : "Playa Larga"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA16",
+      "name" : {
+        "content" : "Cienaga de Zapat"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "GAO",
+    "name" : {
+      "content" : "Guantanamo"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Guantanamo",
+      "description" : {
+        "content" : "Guantanamo"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA21",
+      "name" : {
+        "content" : "Guantanamo"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "GN2",
+    "name" : {
+      "content" : "Granma"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Granma",
+      "description" : {
+        "content" : "Granma"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Marea del Portillo",
+      "description" : {
+        "content" : "Marea del Portillo"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA20",
+      "name" : {
+        "content" : "Granma"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "HAV",
+    "name" : {
+      "content" : "Havana"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "La Habana",
+      "description" : {
+        "content" : "Havana"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Miramar",
+      "description" : {
+        "content" : "Miramar"
+      }
+    }, {
+      "zoneCode" : 3,
+      "name" : "Kholy",
+      "description" : {
+        "content" : "Kholy"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Vedado",
+      "description" : {
+        "content" : "Vedado"
+      }
+    }, {
+      "zoneCode" : 5,
+      "name" : "La Habana Vieja",
+      "description" : {
+        "content" : "La Habana Vieja"
+      }
+    }, {
+      "zoneCode" : 7,
+      "name" : "Playas del Este",
+      "description" : {
+        "content" : "Playas del Este"
+      }
+    }, {
+      "zoneCode" : 8,
+      "name" : "San Antonio de los Baños",
+      "description" : {
+        "content" : "San Antonio de los Baños"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA2",
+      "name" : {
+        "content" : "La Havana area"
+      },
+      "zones" : [ 1, 2, 3, 4, 5, 7 ]
+    } ]
+  }, {
+    "code" : "HOG",
+    "name" : {
+      "content" : "Holguin"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Playa Yuraguanal",
+      "description" : {
+        "content" : "Playa Yuraguanal"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Playa Esmeralda",
+      "description" : {
+        "content" : "Playa Esmeralda"
+      }
+    }, {
+      "zoneCode" : 3,
+      "name" : "Playa Pesquero",
+      "description" : {
+        "content" : "Playa Pesquero"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Playa Guardalavaca",
+      "description" : {
+        "content" : "Playa Guardalavaca"
+      }
+    }, {
+      "zoneCode" : 6,
+      "name" : "Mayarí",
+      "description" : {
+        "content" : "Mayari"
+      }
+    }, {
+      "zoneCode" : 7,
+      "name" : "Las Tunas",
+      "description" : {
+        "content" : "Las Tunas"
+      }
+    }, {
+      "zoneCode" : 8,
+      "name" : "Holguin City",
+      "description" : {
+        "content" : "Holguin City"
+      }
+    }, {
+      "zoneCode" : 9,
+      "name" : "Moa",
+      "description" : {
+        "content" : "Moa"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA3",
+      "name" : {
+        "content" : "Holguin"
+      },
+      "zones" : [ 1, 2, 3, 4, 6, 7, 8 ]
+    } ]
+  }, {
+    "code" : "LAR",
+    "name" : {
+      "content" : "Cayo Largo"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Cayo Largo del sur",
+      "description" : {
+        "content" : "Cayo Largo del sur"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA10",
+      "name" : {
+        "content" : "Cayo Largo"
+      },
+      "zones" : [ 1 ]
+    } ]
+  }, {
+    "code" : "PDR",
+    "name" : {
+      "content" : "Pinar del Río"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 2,
+      "name" : "La Palma",
+      "description" : {
+        "content" : "La Palma"
+      }
+    }, {
+      "zoneCode" : 3,
+      "name" : "Viñales",
+      "description" : {
+        "content" : "Viñales"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Candelaria",
+      "description" : {
+        "content" : "Candelaria"
+      }
+    }, {
+      "zoneCode" : 5,
+      "name" : "Peninsula de Guanahacabibes",
+      "description" : {
+        "content" : "Peninsula de Guanahacabibes"
+      }
+    }, {
+      "zoneCode" : 7,
+      "name" : "Pinar del Rio downtown",
+      "description" : {
+        "content" : "Pinar del Rio downtown"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA14",
+      "name" : {
+        "content" : "Pinar del Río"
+      },
+      "zones" : [ 2, 3, 4, 5 ]
+    } ]
+  }, {
+    "code" : "SMA",
+    "name" : {
+      "content" : "Cayo Santa Maria"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Cayo Santa Maria",
+      "description" : {
+        "content" : "Cayo Santa Maria"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Farallon de las Brujas",
+      "description" : {
+        "content" : "Farallon de las Brujas"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA12",
+      "name" : {
+        "content" : "Cayo Santa Maria"
+      },
+      "zones" : [ 1, 2 ]
+    } ]
+  }, {
+    "code" : "STG",
+    "name" : {
+      "content" : "Santiago of Cuba"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Santiago de Cuba",
+      "description" : {
+        "content" : "Santiago de Cuba"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Guama",
+      "description" : {
+        "content" : "Guama"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Segundo Frente",
+      "description" : {
+        "content" : "Segundo Frente"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA5",
+      "name" : {
+        "content" : "Santiago de Cuba"
+      },
+      "zones" : [ 1, 2 ]
+    } ]
+  }, {
+    "code" : "TND",
+    "name" : {
+      "content" : "Trinidad"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Trinidad",
+      "description" : {
+        "content" : "Trinidad"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Peninsula de Ancon",
+      "description" : {
+        "content" : "Peninsula de Ancon"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Topes de Collantes",
+      "description" : {
+        "content" : "Topes de Collantes"
+      }
+    }, {
+      "zoneCode" : 5,
+      "name" : "Sancti Spiritus",
+      "description" : {
+        "content" : "Sancti Spiritus"
+      }
+    }, {
+      "zoneCode" : 6,
+      "name" : "Yaguajay",
+      "description" : {
+        "content" : "Yaguajay"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA13",
+      "name" : {
+        "content" : "Trinidad"
+      },
+      "zones" : [ 1, 2, 4, 5 ]
+    } ]
+  }, {
+    "code" : "VCL",
+    "name" : {
+      "content" : "Villa Clara"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Santa Clara",
+      "description" : {
+        "content" : "Santa Clara"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Remedios",
+      "description" : {
+        "content" : "Remedios"
+      }
+    }, {
+      "zoneCode" : 3,
+      "name" : "Sagua La Grande",
+      "description" : {
+        "content" : "Sagua La Grande"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA18",
+      "name" : {
+        "content" : "Villa Clara"
+      },
+      "zones" : [ 1, 2 ]
+    } ]
+  }, {
+    "code" : "VRA",
+    "name" : {
+      "content" : "Varadero"
+    },
+    "countryCode" : "CU",
+    "isoCode" : "CU",
+    "zones" : [ {
+      "zoneCode" : 1,
+      "name" : "Varadero",
+      "description" : {
+        "content" : "Varadero"
+      }
+    }, {
+      "zoneCode" : 2,
+      "name" : "Parque Natural Hicacos",
+      "description" : {
+        "content" : "Parque Natural Hicacos"
+      }
+    }, {
+      "zoneCode" : 3,
+      "name" : "Punta Frances",
+      "description" : {
+        "content" : "Punta Frances"
+      }
+    }, {
+      "zoneCode" : 4,
+      "name" : "Punta Hicacos",
+      "description" : {
+        "content" : "Punta Hicacos"
+      }
+    }, {
+      "zoneCode" : 5,
+      "name" : "Reparto de la Torre",
+      "description" : {
+        "content" : "Reparto de la Torre"
+      }
+    }, {
+      "zoneCode" : 6,
+      "name" : "Matanzas City",
+      "description" : {
+        "content" : "Matanzas City"
+      }
+    }, {
+      "zoneCode" : 7,
+      "name" : "Jibacoa",
+      "description" : {
+        "content" : "Jibacoa"
+      }
+    } ],
+    "groupZones" : [ {
+      "groupZoneCode" : "CUBA4",
+      "name" : {
+        "content" : "Varadero area"
+      },
+      "zones" : [ 1, 2, 3, 4, 5, 6 ]
+    } ]
+  } ]
+}
