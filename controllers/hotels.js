@@ -14,9 +14,16 @@ const getHotels = async (req, res = response) => {
     })
 }
 
-const getHotelsFields = async (req, res = response) => {
+const getHotelsFilter = async ({body}, res = response) => {
 
-    const hotels = await Hotels.find({ hotels: [{ name: { content: 'Memories Miramar Habana' } }]  }, 'name code' )
+    const ExpReg = new RegExp(body.query, 'i');
+
+    const hotels = await Hotels.find({ 'name.content': ExpReg },
+        body.fields 
+            ? `name.content code ${body.fields}` 
+            : 'name.content code')
+    
+    
 
     res.json({
         ok: true,
@@ -27,5 +34,5 @@ const getHotelsFields = async (req, res = response) => {
 
 module.exports = {
     getHotels,
-    getHotelsFields
+    getHotelsFilter
 }

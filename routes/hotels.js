@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { getHotels, getHotelsFields } = require('../controllers/hotels')
+const { getHotels, getHotelsFilter } = require('../controllers/hotels')
 
 
 
@@ -8,7 +8,7 @@ const { getHotels, getHotelsFields } = require('../controllers/hotels')
 router.get('/', getHotels)
 
 // Get hotels with filds selecteds
-router.get('/fields', getHotelsFields)
+router.get('/filter', getHotelsFilter)
 
 
 module.exports = router
