@@ -3,8 +3,6 @@ const { getDestinations, getDestinationsFilter } = require('../controllers/desti
 const router = express.Router()
 
 
-
-
 // Get full destinations
 router.get('/', getDestinations)
 
