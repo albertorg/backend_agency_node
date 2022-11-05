@@ -22,6 +22,7 @@ app.use( express.static('public') )
 // Routes
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/hotels', require('./routes/hotels'))
+app.use('/api/destinations', require('./routes/destinations'))
 // TODO: auth // create user, login, renew token
 // TODO: CRUD: Events
 
