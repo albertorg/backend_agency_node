@@ -18,4 +18,6 @@ const UserSchema = Schema({
     // Here add address, date, and other user info
 })
 
+
+
 module.exports = model('User', UserSchema)

@@ -4,8 +4,9 @@ const Hotels = require('../models/api_models/Hotels')
 
 const getHotels = async (req, res = response) => {
 
-    console.log(req)
-    const hotels = await Hotels.find()
+    const { destinationCode } = req.query
+
+    const hotels = await Hotels.find({'destinationCode': code })
 
     res.json({
         ok: true,
@@ -16,15 +17,24 @@ const getHotels = async (req, res = response) => {
 
 const getHotelsFilter = async ( req, res = response ) => {
 
-    const {text, fields, limit = 15} = req.query
+    const fundamentalFields = 'name.content code city coordinates destinationCode'
 
-    const ExpReg = new RegExp(text, 'i');
-
-    const hotels = await Hotels.find({ 'name.content': ExpReg },
-        fields 
-            ? `name.content code ${fields}` 
-            : 'name.content code').limit(limit)
+    const {text, fields, limit = 15, destinationCode = null} = req.query
+    let hotels = []
     
+    if (destinationCode) {
+        hotels = await Hotels.find({ 'destinationCode': destinationCode },
+            fields
+                ? `${fundamentalFields} ${fields}`
+                : fundamentalFields)
+    }else {
+        const ExpReg = new RegExp(text, 'i');
+
+        hotels = await Hotels.find({ 'name.content': ExpReg },
+            fields
+                ? `${fundamentalFields} ${fields}`
+                : fundamentalFields).limit(limit)
+    }
     
     res.json({
         ok: true,

@@ -45,6 +45,11 @@ const DestinationsSchema = Schema({
 
 })
 
+// DestinationsSchema.method('toJSON', function () {
+//     const { _id, ...object } = this.toObject()
+//     return object
+// })
+
 // const DestinationsSchema = Schema({
 //     destinations: [ApiDestinationSchema]
 // })

@@ -33,4 +33,9 @@ const ApiHotelRoomFacilitySchema = Schema({
 
 })
 
+HotelsSchema.method('toJSON', function () {
+    const { _id, ...object } = this.toObject()
+    return object
+})
+
 module.exports = model('ApiHotelRoomFacility', ApiHotelRoomFacilitySchema)

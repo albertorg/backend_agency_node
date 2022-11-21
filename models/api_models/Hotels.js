@@ -488,7 +488,10 @@ const HotelsSchema = Schema({
 }, { timestamps: true })
 
 
-
+// HotelsSchema.method('toJSON', function() {
+//     const { _id, ...object} = this.toObject()
+//     return object
+// })
 
 // const HotelsSchema = Schema({
 

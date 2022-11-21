@@ -17,4 +17,9 @@ const ApiWildCardSchema = Schema({
 
 })
 
+ApiWildCardSchema.method('toJSON', function () {
+    const { _id, ...object } = this.toObject()
+    return object
+})
+
 module.exports = model('ApiWildCard', ApiWildCardSchema)
