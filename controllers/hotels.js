@@ -14,7 +14,7 @@ const getHotels = async (req, res = response) => {
 
     res.json({
         ok: true,
-        msg: 'getHotels',
+        msg: 'getHotelsDetails',
         hotels
     })
     
