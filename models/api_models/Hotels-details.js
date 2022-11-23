@@ -404,7 +404,19 @@ const ApiAccommodationSchema = Schema({
 
 })
 
-const HotelsSchema = Schema({
+
+// HotelsSchema.method('toJSON', function() {
+//     const { _id, ...object} = this.toObject()
+//     return object
+// })
+
+// const HotelsSchema = Schema({
+
+//     hotels: [ApiHotelSchema]
+
+// }, { timestamps: true })
+
+const HotelsDetailsSchema = Schema({
     S2C: {
         type: String
     },
@@ -487,17 +499,4 @@ const HotelsSchema = Schema({
 
 }, { timestamps: true })
 
-
-// HotelsSchema.method('toJSON', function() {
-//     const { _id, ...object} = this.toObject()
-//     return object
-// })
-
-// const HotelsSchema = Schema({
-
-//     hotels: [ApiHotelSchema]
-
-// }, { timestamps: true })
-
-
-module.exports = model('Hotels', HotelsSchema)
+module.exports = model('HotelsDetails', HotelsDetailsSchema)

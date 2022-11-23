@@ -1,18 +1,23 @@
-const { response, text } = require('express')
+const { response } = require('express')
 const Hotels = require('../models/api_models/Hotels')
 
 
 const getHotels = async (req, res = response) => {
 
-    const { destinationCode } = req.query
+    const { codes = null } = req.query
 
-    const hotels = await Hotels.find({'destinationCode': code })
+    const hotels = await Promise.all(codes.map(async (code) => {
+    
+        const hotel = await Hotels.find({ 'code': code })
+        return hotel[0]
+    }))
 
     res.json({
         ok: true,
         msg: 'getHotels',
         hotels
     })
+    
 }
 
 const getHotelsFilter = async ( req, res = response ) => {

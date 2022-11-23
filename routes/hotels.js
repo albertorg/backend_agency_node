@@ -5,7 +5,7 @@ const { getHotels, getHotelsFilter } = require('../controllers/hotels')
 
 
 // Get full hotels
-router.get('/', getHotels)
+router.get('/details', getHotels)
 
 // Get hotels with filds selecteds
 router.get('/filter', getHotelsFilter)
