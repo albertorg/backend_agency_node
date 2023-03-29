@@ -1,14 +1,14 @@
 const express = require('express')
 const router = express.Router()
-const { getHotels, getHotelsFilter } = require('../controllers/hotels')
+const { getAvailability, getConfirmation } = require('../controllers/booking')
 
 
 
-// Get full hotels
-router.get('/details', getHotels)
+router.get('/availability', getAvailability)
 
-// Get hotels with filds selecteds
-router.get('/filter', getHotelsFilter)
+// router.get('/CheckRate', getHotelsFilter)
+
+router.get('/confirmation', getConfirmation)
 
 
 module.exports = router
