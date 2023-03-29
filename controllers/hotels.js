@@ -1,7 +1,6 @@
 const { response } = require('express')
 const Hotels = require('../models/api_models/Hotels')
 
-
 const getHotels = async (req, res = response) => {
 
     const { codes = null } = req.query
@@ -33,7 +32,8 @@ const getHotelsFilter = async ( req, res = response ) => {
                 ? `${fundamentalFields} ${fields}`
                 : fundamentalFields)
     }else {
-        const ExpReg = new RegExp(text, 'i');
+        const escapedString = text.replace(/[/\-\\^$*+?.()|[\]{}]/g, '\\$&')
+        const ExpReg = new RegExp(escapedString, 'i')
 
         hotels = await Hotels.find({ 'name.content': ExpReg },
             fields

@@ -14,10 +14,10 @@ const getDestinations = async (req, res = response) => {
 }
     
 const getDestinationsFilter = async (req, res = response) => {
-
     const { text, fields, limit = 5 } = req.query
-
-    const ExpReg = new RegExp(text, 'i');
+    
+    const escapedString = text.replace(/[/\-\\^$*+?.()|[\]{}]/g, '\\$&')
+    const ExpReg = new RegExp(escapedString, 'i');
 
     const destinations = await Destinations.find({ 'name.content': ExpReg },
         fields
