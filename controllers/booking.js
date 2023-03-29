@@ -1,8 +1,10 @@
-const { response } = require('express')
-const Hotels = require('../models/api_models/Hotels')
+const { response , request} = require('express')
+const xSignature = require('../helpers/signature-generator');
+const axios = require('axios');
+const Hotels = require('../models/api_models/Hotels');
 
 
-const getAvailability = async (req, res = response) => {
+const getAvailability = async (req = request, res = response) => {
 
     const { codes = null } = req.query
 
@@ -19,35 +21,66 @@ const getAvailability = async (req, res = response) => {
     })
 }
 
-const getConfirmation = async (req, res = response) => {
+const getConfirmation = async (req = response, res = response) => {
 
-    const fundamentalFields = 'name.content code city coordinates destinationCode'
+    try {
+        const booking = req.body
 
-    const { text, fields, limit = 15, destinationCode = null } = req.query
-    let hotels = []
+        const config = {
+            method: 'post',
+            url: `${process.env.DOMAIN_SECURE}/hotel-api/1.0/bookings`,
+            headers: {
+                'Api-key': process.env.API_KEY,
+                'X-Signature': xSignature(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: booking
+        };
 
-    if (destinationCode) {
-        hotels = await Hotels.find({ 'destinationCode': destinationCode },
-            fields
-                ? `${fundamentalFields} ${fields}`
-                : fundamentalFields)
-    } else {
-        const ExpReg = new RegExp(text, 'i');
+        const { data } = await axios(config)
 
-        hotels = await Hotels.find({ 'name.content': ExpReg },
-            fields
-                ? `${fundamentalFields} ${fields}`
-                : fundamentalFields).limit(limit)
+        res.send(data)
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            ok: false,
+            msg: 'Internal server error'
+        })
     }
+}
 
-    res.json({
-        ok: true,
-        msg: 'getHotelsFilds',
-        hotels
-    })
+const checkRate = async (req = response, res = response) => {
+
+    try {
+        const rate = req.body
+
+        const config = {
+            method: 'post',
+            url: `${process.env.DOMAIN_SECURE}/hotel-api/1.0/checkrates`,
+            headers: {
+                'Api-key': process.env.API_KEY,
+                'X-Signature': xSignature(),
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            data: rate
+        };
+
+        const { data } = await axios(config)
+
+        res.send(data)
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({
+            ok: false,
+            msg: 'Internal server error'
+        })
+    }
 }
 
 module.exports = {
+    checkRate,
     getAvailability,
     getConfirmation
 }

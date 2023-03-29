@@ -4,7 +4,6 @@ const Destinations = require('../models/api_models/Destinations')
 
 const getDestinations = async (req, res = response) => {
 
-    console.log(req)
     const destinations = await Destinations.find()
 
     res.json({

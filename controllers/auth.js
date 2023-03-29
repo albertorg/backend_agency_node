@@ -39,7 +39,7 @@ const createUser = async(req, res = response) => {
     } catch (error) {
         res.status(500).json({
             ok: false,
-            msg: 'Please conact admin'
+            msg: 'Please contact admin'
         })
         console.log(error)
     }
