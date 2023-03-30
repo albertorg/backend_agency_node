@@ -54,7 +54,7 @@ const getConfirmation = async (req = response, res = response) => {
 
         res.send(data)
     } catch (error) {
-        console.error(error);
+        console.error(error.response.data);
         res.status(500).json({
             ok: false,
             msg: 'Internal server error'
