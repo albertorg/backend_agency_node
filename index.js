@@ -11,7 +11,7 @@ const app = express()
 dbConnection()
 
 // Cors
-app.use(cors())
+app.use(cors()) // cors({origin: 'https://tupaginaweb.com'}) in producction
 
 // Reading and parsing body 
 app.use(express.json())
