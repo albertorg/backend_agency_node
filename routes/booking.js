@@ -11,4 +11,5 @@ router.get('/checkrates', checkRate)
 router.post('/confirmation', getConfirmation)
 
 
+
 module.exports = router
