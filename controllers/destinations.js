@@ -1,4 +1,4 @@
-const { response, text } = require('express')
+const { response } = require('express')
 const Destinations = require('../models/api_models/Destinations')
 
 
